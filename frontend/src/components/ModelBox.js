@@ -24,7 +24,7 @@ console.log(newUser)
       const updateUser = () => {
         console.log("hjbjhb")
         axios
-          .put(`http://localhost:4000/update/${id}`,{
+          .put(`https://crud-api-hjvr.onrender.com/update/${id}`,{
             
            first_name:firstName,
            last_name:lastName,
@@ -43,7 +43,7 @@ console.log(newUser)
       const createUser = () => {
        
         axios
-          .post(`http://localhost:4000/create`,{
+          .post(`https://crud-api-hjvr.onrender.com/create`,{
            first_name:firstName,
            last_name:lastName,
            email:email,
