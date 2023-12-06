@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:4000',{
+      .get('https://crud-api-hjvr.onrender.com',{
         params: {
           page: currentPage,
          
@@ -51,7 +51,7 @@ const Delete = (e) => {
   const userId = parseInt(e.target.id);
 
   axios
-      .delete(`http://localhost:4000/delete/${userId}`)
+      .delete(`https://crud-api-hjvr.onrender.com/delete/${userId}`)
       .then((res) => {
         alert(res.data)
         setIsDeleted(!isDeleted);
@@ -72,7 +72,7 @@ const applyFilter = () => {
   const handleSearch = () => {
     
     axios
-      .post(`http://localhost:4000/search`,{fullName: userName})
+      .post(`https://crud-api-hjvr.onrender.com/search`,{fullName: userName})
       .then((res) => {
         setData(res.data);
       })  
