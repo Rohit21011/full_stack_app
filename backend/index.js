@@ -11,7 +11,7 @@ dbConnect();
 
 
 const router = require("./routes/routes");
-
+const PORT = process.env.PORT || 3000
 //  app.use("/home",routes);
 app.use("/",router);
 app.use("/search",router)
@@ -19,7 +19,7 @@ app.use("/delete",router)
 app.use("/update",router)
 app.use('/create',router)
 app.use("/filter",router)
-app.listen(4000,()=>{
+app.listen(PORT,()=>{
     console.log("server running")
 });
 
